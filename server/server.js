@@ -22,7 +22,7 @@ import paymentRoutes from "./routes/shop/payment-routes.js";
 
 
 mongoose
-  .connect("mongodb+srv://naveedmalik1503_db_user:IP66EEENX1WrTOTb@cluster0.bmcprgs.mongodb.net")
+  .connect(process.env.MONGO_URL)
   .then(() => console.log("MongoDB connected"))
   .catch((error) => console.log(error));
 
